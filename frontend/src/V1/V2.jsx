@@ -8,6 +8,7 @@ import hero2 from "../assets/pngwing.com2.png"; // Make sure your PNG watch imag
 
 import hero3 from "../assets/pngwing.com3.png"; // Make sure your PNG watch image has a transparent background
 import hero4 from "../assets/pngwing.com4.png";
+import Tech from "./Tech";
 
 function V2() {
 
@@ -366,6 +367,12 @@ const dotVariants = {
 {/* sales chart */}
 <motion.div className=" min-h-s w-full mt-30 flex justify-center items-center " >
     <AnimatedLineGraph/>
+</motion.div>
+
+{/* TECH USED */}
+
+<motion.div>
+  <Tech/>
 </motion.div>
 
 
