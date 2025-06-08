@@ -30,7 +30,7 @@ function IconWithRedSpread({ src, alt }) {
             opacity: 1,
             x: "-50%",
             y: "-50%",
-            transition: { duration: 2, ease: "easeOut"  },
+            transition: { duration: 2, ease: "easeOut" },
           },
         }}
       />
@@ -101,7 +101,8 @@ function Tech() {
               }}
             ></motion.div>
           </div>
-        </motion.div><motion.div
+        </motion.div>
+        <motion.div
           className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 shadow-lg row-span-1 flex justify-center items-center flex-col"
           style={{
             boxShadow: "-15px 14px 12px rgba(225, 46, 0, 0.3)", // custom red shadow
@@ -121,29 +122,24 @@ function Tech() {
           </p>
           <div className="grid grid-cols-3 max-w-5xl ">
             <motion.div
-            initial={{
-                
-            }}
-            animate={{
-                rotateX:[10,20,30,40,50,,40,30,20,10],
-                
-            }}
-            transition={{
-                repeat:Infinity
-            }}
+              initial={{}}
+              animate={{
+                rotateX: [10, 20, 30, 40, 50, , 40, 30, 20, 10],
+              }}
+              transition={{
+                repeat: Infinity,
+              }}
               className="bg-red-500 w-16 h-16 mt-3 rounded-tr-full mr-90 "
-              
             ></motion.div>
             <motion.div
               className="bg-white w-5 h-5 mt-3 rounded-full"
               initial={{
-                
                 x: -150,
               }}
               animate={{
                 scale: 1,
                 rotate: 180,
-                x: [-150,290,-150]
+                x: [-150, 290, -150],
               }}
               transition={{
                 repeat: Infinity,
@@ -152,24 +148,17 @@ function Tech() {
               }}
             ></motion.div>
             <motion.div
-            initial={{
-                
-            }}
-            animate={{
-                rotateX:[10,20,30,40,50,,40,30,20,10],
-                
-            }}
-            transition={{
-                repeat:Infinity
-            }}
+              initial={{}}
+              animate={{
+                rotateX: [10, 20, 30, 40, 50, , 40, 30, 20, 10],
+              }}
+              transition={{
+                repeat: Infinity,
+              }}
               className="bg-red-500 w-15 h-15 mt-3 rounded-tl-full ml-25 p "
-              
             ></motion.div>
-            
           </div>
         </motion.div>
-
-        
 
         <motion.div
           className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 shadow-lg row-span-1 flex justify-center items-center flex-col"
@@ -179,17 +168,14 @@ function Tech() {
           }}
         >
           <motion.div
-          animate={{
-           
-           
-           
-          }}
-          transition={{
-            repeat:Infinity,
-            ease:"easeIn",
-            duration:5
-          }}
-           className="grid grid-cols-3 gap-6 text-white ">
+            animate={{}}
+            transition={{
+              repeat: Infinity,
+              ease: "easeIn",
+              duration: 5,
+            }}
+            className="grid grid-cols-3 gap-6 text-white "
+          >
             <IconWithRedSpread src={a} alt="Airbnb" />
             <IconWithRedSpread src={s} alt="Sogou" />
             <IconWithRedSpread src={d} alt="Dash" />
@@ -200,14 +186,65 @@ function Tech() {
         </motion.div>
 
         <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 shadow-lg gap-2 row-span-1 grid grid-cols-3">
+          {/* Water Resistant */}
+          <motion.div
+            animate={{
+              rotateY: 360,
+            }}
+            transition={{
+              duration: 5,
+              delay: 3,
+              repeat: Infinity,
+            }}
+            whileHover={{
+              rotateY: 0,
+            }}
+            className="bg-red-500 grid grid-rows-2 hover:cursor-pointer text-center p-4 rounded-xl"
+          >
+            <h2 className="text-xl font-semibold text-white ">
+              Water Resistant
+            </h2>
+            <p className="">Reliable performance in all weather conditions.</p>
+          </motion.div>
 
-          <div className="bg-blue-50 grid grid-rows-2">
+          {/* Smart Features */}
+          <motion.div
+            animate={{
+              rotateY: 360,
+            }}
+            transition={{
+              duration: 5,
+              delay: 5,
+              repeat: Infinity,
+            }}
+            whileHover={{}}
+            className="bg-blue-50 grid  hover:cursor-pointergrid-rows-2 text-center p-4 rounded-xl"
+          >
+            <h2 className="text-xl font-semibold text-red-500">
+              Smart Features
+            </h2>
+            <p className="text-black ">
+              Stay connected and track your fitness effortlessly.
+            </p>
+          </motion.div>
 
-            
-
-          </div>
-          <div className="bg-blue-50"></div>
-          <div className="bg-blue-50"></div>
+          {/* Elegant Design */}
+          <motion.div
+            animate={{
+              rotateY: 360,
+            }}
+            transition={{
+              duration: 5,
+              delay: 5,
+              repeat: Infinity,
+            }}
+            className="bg-red-500 grid grid-rows-2 text-center p-4 rounded-xl"
+          >
+            <h2 className="text-xl font-semibold text-white">Elegant Design</h2>
+            <p className="text-white">
+              A sleek, modern look that complements any outfit.
+            </p>
+          </motion.div>
         </div>
       </div>
     </div>
