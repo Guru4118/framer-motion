@@ -5,7 +5,7 @@ import AnimatedLineGraph from "./AnimatedLineGraph";
 import hero1 from "../assets/pngwing.com1.png"; // Make sure your PNG watch image has a transparent background
 
 import hero2 from "../assets/pngwing.com2.png"; // Make sure your PNG watch image has a transparent background
-
+import Quick from "./Quick";
 import hero3 from "../assets/pngwing.com3.png"; // Make sure your PNG watch image has a transparent background
 import hero4 from "../assets/pngwing.com4.png";
 import Tech from "./Tech";
@@ -43,7 +43,7 @@ const dotVariants = {
     <motion.div className="min-h-screen w-full bg-black text-white font-sans overflow-hidden">
       
       {/* NAVIGATION */}
-      <motion.nav className="flex flex-row gap-16 justify-center pt-6 mb-8 text-xl font-bold">
+      <motion.nav className="flex flex-row gap-16 justify-center pt-6  text-xl font-bold">
         {["Home", "About", "Store Locator"].map((text, index) => (
           <motion.a
             key={index}
@@ -59,60 +59,10 @@ const dotVariants = {
         ))}
       </motion.nav>
 
-      {/* HERO SECTION */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 px-8 pt-6 items-center">
-        
-        {/* LEFT: WATCH IMAGE */}
-        <div className="flex justify-center">
-          <motion.img
-            src={hero}
-            alt="Watch"
-            className="w-[320px] md:w-[400px]"
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 ,filter:"none"
-            
-            }}
-            
-            whileHover={{
-              scale: 1.05,
-              rotateX: 15,
-              rotateY: 10,
-              filter:
-                "drop-shadow(0 0 15px rgba(255, 255, 255,0.8)) drop-shadow(0 0 40px rgba(255, 255, 255, 0.8))",
-                
-            }}
-             transition={{
-    duration: 0.5,
-    ease: "easeInOut",
-  }}
-          />
-        </div>
 
-        {/* RIGHT: TEXT CONTENT */}
-        <motion.div
-          initial={{ x: 100, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="space-y-6"
-        >
-          <motion.h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
-            Elevate Your Style <br /> With Our Signature Watches
-          </motion.h1>
-          <p className="text-lg text-gray-300">
-            Discover timeless elegance combined with cutting-edge design. Shop now and redefine how you track time.
-          </p>
-          <motion.button
-            whileHover={{
-              scale: 1.1,
-              boxShadow: "0 0 20px rgba(255, 0, 0, 0.8)",
-            }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-red-600 px-6 py-3 rounded-full font-bold text-white"
-          >
-            Shop Now
-          </motion.button>
-        </motion.div>
-      </div>
+      <Quick/>
+
+     
 
 
 
@@ -126,7 +76,7 @@ const dotVariants = {
 
 
       {/* Professional Bento Layout Section */}
-<motion.div className="max-w-6xl mx-auto mt-24 px-6 grid grid-cols-1 md:grid-cols-3 grid-rows-3 gap-6">
+<motion.div className="max-w-6xl mx-auto  px-6 grid grid-cols-1 md:grid-cols-3 grid-rows-3 gap-6">
   
   {/* Tile 1 */}
   <motion.div
@@ -258,7 +208,7 @@ const dotVariants = {
             scale:1,
         }}
         whileHover={{
-            background:"cyan"
+            background:"red"
         }}
         
 
@@ -396,57 +346,7 @@ const dotVariants = {
 
 
 {/*  */}
-      <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-10 px-8 mt-30 ml-20 items-center">
-
-        <motion.div
-          initial={{ x: 100, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="space-y-6"
-        >
-          <motion.h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
-            Elevate Your Style <br /> With Our Signature Watches
-          </motion.h1>
-          <p className="text-lg text-gray-300">
-            Discover timeless elegance combined with cutting-edge design. Shop now and redefine how you track time.
-          </p>
-          <motion.button
-            whileHover={{
-              scale: 1.1,
-              boxShadow: "0 0 20px rgba(255, 0, 0, 0.8)",
-            }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-red-600 px-6 py-3 rounded-full font-bold text-white"
-          >
-            Shop Now
-          </motion.button>
-        </motion.div>
-
-        <div className="flex justify-center">
-          <motion.img
-            src={hero3}
-            alt="Watch"
-            className="w-[320px] md:w-[400px]"
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 ,filter:"none"}}
-            whileHover={{
-              scale: 1.05,
-              rotateX: 15,
-              rotateY: 10,
-              filter:
-                "drop-shadow(0 0 15px rgba(255, 226, 0, 0.9)) drop-shadow(0 0 40px rgba(255, 0, 0, 0.6))",
-                
-            }}
-             transition={{
-    duration: 0.5,
-    ease: "easeInOut"
-  }}
-          />
-        </div>
-
-
-
-      </motion.div>
+      
     </motion.div>
   );
 }

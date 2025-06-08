@@ -193,12 +193,10 @@ function Tech() {
             }}
             transition={{
               duration: 5,
-              delay: 3,
+              delay: 5,
               repeat: Infinity,
             }}
-            whileHover={{
-              rotateY: 0,
-            }}
+            
             className="bg-red-500 grid grid-rows-2 hover:cursor-pointer text-center p-4 rounded-xl"
           >
             <h2 className="text-xl font-semibold text-white ">
@@ -217,7 +215,7 @@ function Tech() {
               delay: 5,
               repeat: Infinity,
             }}
-            whileHover={{}}
+            
             className="bg-blue-50 grid  hover:cursor-pointergrid-rows-2 text-center p-4 rounded-xl"
           >
             <h2 className="text-xl font-semibold text-red-500">
