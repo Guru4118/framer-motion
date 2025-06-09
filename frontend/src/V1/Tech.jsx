@@ -60,14 +60,17 @@ function Tech() {
         >
           <p className="text-red-500 font-bold ">Smart Watch</p>
           <p className="font-extrabold text-2xl p-2">
-            Seamless SDKs for modern frameworks
+           
+Designed for the Modern Lifestyle
           </p>
           <p>
-            Clerk keeps developer experience front-and-center by providing
-            helpful SDKs for most modern frameworks on web and mobile.
+            
+
+Engineered to adapt to your day, our watches sync style with functionality — giving you elegant design, fitness tracking, and instant alerts in one refined package.
+        
           </p>
           <p className="text-red-500 font-extrabold text-xl pt-2">
-            All frameworks
+            Modern Lifestyle
           </p>
           <div className="flex ">
             <motion.div
@@ -115,14 +118,14 @@ function Tech() {
         >
           <p className="text-red-500 font-bold ">Smart Watch</p>
           <p className="font-extrabold text-2xl p-2">
-            Seamless SDKs for modern frameworks
+            Timeless Performance, Modern Precision
           </p>
           <p>
-            Clerk keeps developer experience front-and-center by providing
-            helpful SDKs for most modern frameworks on web and mobile.
-          </p>
+            
+Our smartwatches blend classic aesthetics with cutting-edge tech, ensuring every second feels seamless — whether you're at work or on the go.
+  </p>
           <p className="text-red-500 font-extrabold text-xl pt-2">
-            All frameworks
+            Modern Precision
           </p>
           <div className="grid grid-cols-3 max-w-5xl ">
             <motion.div
