@@ -10,6 +10,8 @@ import Quick from "./Quick";
 import hero3 from "../assets/pngwing.com3.png"; // Make sure your PNG watch image has a transparent background
 import hero4 from "../assets/pngwing.com4.png";
 import Tech from "./Tech";
+import Review from "./Review";
+import Footer from "./QuickLink";
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -69,6 +71,7 @@ function V2() {
     },
   };
   return (
+    <>
     <motion.div className="min-h-screen w-full bg-black text-white font-sans overflow-hidden">
       {showMobileWarning && (
         <div className="fixed inset-0 bg-black bg-opacity-90 z-[9999] flex flex-col justify-center items-center p-6">
@@ -388,6 +391,10 @@ function V2() {
 
       {/*  */}
     </motion.div>
+
+    <Review/>
+    <Footer/>
+    </>
   );
 }
 
