@@ -1,5 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const AnimatedLineGraph = () => {
   const points = [
@@ -16,10 +18,14 @@ const AnimatedLineGraph = () => {
   const gradientId = "lineGradient";
 
   return (
-    <div className="w-full max-w-5xl h-full rounded-xl bg-[#0d0d0d] border border-white/10 drop-shadow-2xl drop-shadow-red-500  p-4 ">
+    <div
+    data-aos="zoom-out"
+    className="w-full max-w-5xl h-full rounded-xl bg-[#0d0d0d] border border-white/10 drop-shadow-2xl drop-shadow-red-500  p-4 m-3 md:m-0 ">
 
-    <div className=" flex justify-center items-center font-extrabold text-2xl">
-        <div>Sales Over A Decade </div></div>
+    <div 
+    data-aos="zoom-out"
+    className=" flex justify-center items-center font-extrabold text-2xl  w-20 md:w-4">
+        <div className="md:pl-40 md:text-3xl">Sales Over A Decade </div></div>
       <svg viewBox="0 0 320 120" className="w-full h-full">
         <defs>
           <linearGradient id={gradientId} x1="0" y1="0" x2="0" y2="1">

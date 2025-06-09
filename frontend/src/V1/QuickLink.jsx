@@ -10,7 +10,7 @@ import {
 function Footer() {
   return (
     <footer className="bg-gray-200 text-sm text-gray-800 pt-16 pb-6 px-6 md:px-20">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-10">
+      <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-5 gap-10">
 
         {/* Logo */}
         <div>

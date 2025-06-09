@@ -1,20 +1,21 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import hero3 from "../assets/pngwing.com3.png";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 function Quick() {
   return (
     <div className="min-h-screen bg-black text-white flex items-center">
-      <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-10 px-8 md:px-20 items-center">
+      <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-10 px-8 md:px-20 mt-14 md:mt-0 items-center">
 
         {/* Text Section */}
         <motion.div
           initial={{ x: 100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="space-y-6 ml-30"
+          className="space-y-6  md:ml-30"
         >
-          <motion.h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
+          <motion.h1 className="text-2xl md:text-5xl font-extrabold leading-tight">
             Elevate Your Style <br /> With Our Signature Watches
           </motion.h1>
 
@@ -40,19 +41,24 @@ function Quick() {
           <motion.img
             src={hero3}
             alt="Premium Watch"
-            className="w-[320px] md:w-[400px] ml-20"
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
+            className="w-[220px] md:w-[400px] md:ml-20"
+            data-Aos="zoom-in"
+            
+            animate={{ opacity: 1, scale: 1,
+              filter:
+                "drop-shadow(0 0 15px rgba(255, 226, 0, 0.9)) drop-shadow(0 0 40px rgba(255, 0, 0, 0.6))",
+       
+             }}
             whileHover={{
               scale: 1.05,
-              rotateX: 15,
-              rotateY: 10,
+              rotate:360,
               filter:
                 "drop-shadow(0 0 15px rgba(255, 226, 0, 0.9)) drop-shadow(0 0 40px rgba(255, 0, 0, 0.6))",
             }}
             transition={{
-              duration: 0.5,
-              ease: "easeInOut"
+              duration: 3,
+              ease: "easeInOut",
+              
             }}
           />
         </div>

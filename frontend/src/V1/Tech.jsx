@@ -5,6 +5,8 @@ import u from "../assets/uikit.svg";
 import s from "../assets/sogou.svg";
 import f from "../assets/filedotio.svg";
 import { motion } from "framer-motion";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function IconWithRedSpread({ src, alt }) {
   return (
@@ -46,9 +48,10 @@ function IconWithRedSpread({ src, alt }) {
 
 function Tech() {
   return (
-    <div className="min-h-screen flex justify-center items-center bg-black px-4 py-12">
-      <div className="grid grid-cols-2 md:grid-cols-2 gap-6 max-w-6xl w-full">
+    <div className="min-h-screen flex flex-col md:flex-row justify-center items-center bg-black px-4 py-12">
+      <div className="md:grid  md:grid-cols-2 gap-6 max-w-6xl w-full">
         <motion.div
+        data-aos="zoom-in"
           className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 shadow-lg row-span-1 flex justify-center items-center flex-col"
           style={{
             boxShadow: "-15px 14px 12px rgba(225, 46, 0, 0.3)", // custom red shadow
@@ -103,6 +106,7 @@ function Tech() {
           </div>
         </motion.div>
         <motion.div
+        data-aos="zoom-out"
           className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 shadow-lg row-span-1 flex justify-center items-center flex-col"
           style={{
             boxShadow: "-15px 14px 12px rgba(225, 46, 0, 0.3)", // custom red shadow
@@ -132,7 +136,8 @@ function Tech() {
               className="bg-red-500 w-16 h-16 mt-3 rounded-tr-full mr-90 "
             ></motion.div>
             <motion.div
-              className="bg-white w-5 h-5 mt-3 rounded-full"
+           
+              className="bg-white w-5 h-5 mt-3 rounded-full md:opacity-100 opacity-0 "
               initial={{
                 x: -150,
               }}
@@ -155,12 +160,13 @@ function Tech() {
               transition={{
                 repeat: Infinity,
               }}
-              className="bg-red-500 w-15 h-15 mt-3 rounded-tl-full ml-25 p "
+              className="bg-red-500 w-15 h-15 mt-3 rounded-tl-full ml-10 md:ml-25 p "
             ></motion.div>
           </div>
         </motion.div>
 
         <motion.div
+        data-aos="zoom-out"
           className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 shadow-lg row-span-1 flex justify-center items-center flex-col"
           style={{
             boxShadow: "-15px 14px 12px rgba(225, 46, 0, 0.3)", // custom red shadow
@@ -185,57 +191,46 @@ function Tech() {
           </motion.div>
         </motion.div>
 
-        <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 shadow-lg gap-2 row-span-1 grid grid-cols-3">
+        <div
+        data-aos="zoom-in"
+          className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 shadow-lg gap-4 grid grid-cols-1 md:grid-cols-3"
+          style={{
+            boxShadow: "-15px 14px 12px rgba(225, 46, 0, 0.3)", // custom red shadow
+            borderRadius: "1rem",
+          }}
+        >
           {/* Water Resistant */}
           <motion.div
-            animate={{
-              rotateY: 360,
-            }}
-            transition={{
-              duration: 5,
-              delay: 5,
-              repeat: Infinity,
-            }}
-            
+            animate={{ rotateY: 360 }}
+            transition={{ duration: 5, delay: 5, repeat: Infinity }}
             className="bg-red-500 grid grid-rows-2 hover:cursor-pointer text-center p-4 rounded-xl"
           >
-            <h2 className="text-xl font-semibold text-white ">
+            <h2 className="text-xl font-semibold text-white">
               Water Resistant
             </h2>
-            <p className="">Reliable performance in all weather conditions.</p>
+            <p className="text-white">
+              Reliable performance in all weather conditions.
+            </p>
           </motion.div>
 
           {/* Smart Features */}
           <motion.div
-            animate={{
-              rotateY: 360,
-            }}
-            transition={{
-              duration: 5,
-              delay: 5,
-              repeat: Infinity,
-            }}
-            
-            className="bg-blue-50 grid  hover:cursor-pointergrid-rows-2 text-center p-4 rounded-xl"
+            animate={{ rotateY: 360 }}
+            transition={{ duration: 5, delay: 5, repeat: Infinity }}
+            className="bg-blue-50 grid grid-rows-2 hover:cursor-pointer text-center p-4 rounded-xl"
           >
             <h2 className="text-xl font-semibold text-red-500">
               Smart Features
             </h2>
-            <p className="text-black ">
+            <p className="text-black">
               Stay connected and track your fitness effortlessly.
             </p>
           </motion.div>
 
           {/* Elegant Design */}
           <motion.div
-            animate={{
-              rotateY: 360,
-            }}
-            transition={{
-              duration: 5,
-              delay: 5,
-              repeat: Infinity,
-            }}
+            animate={{ rotateY: 360 }}
+            transition={{ duration: 5, delay: 5, repeat: Infinity }}
             className="bg-red-500 grid grid-rows-2 text-center p-4 rounded-xl"
           >
             <h2 className="text-xl font-semibold text-white">Elegant Design</h2>
